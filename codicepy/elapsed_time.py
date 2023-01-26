@@ -1,9 +1,13 @@
-"""Script to measure things while other Scripts executes"""
+"""Script to measure exec time of wrapped function"""
 
 from time import time
 
-# Measures Execution Time - ET - of func 
 def time_it(func):
+    """Measures Execution Time - ET - of func 
+
+    Args:
+        func (func): function to be wrapped
+    """
     def wrapper(*args, **kwargs):
         start = time()
         func(*args, **kwargs)
